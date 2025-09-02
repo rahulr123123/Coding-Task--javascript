@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>See console for Result</h1>
+
+    <script>
+        class calculator{
+            constructor(){
+                let num1=prompt("Enter your first number")
+                while(!num1 || isNaN(num1)){
+                    num1=prompt("Enter your first number(value must be number)")
+                }
+                this.a=Number(num1)
+
+                  let num2=prompt("Enter your second number")
+                while(!num2 || isNaN(num2)){
+                    num2=prompt("Enter your first number(value must be number)")
+                }
+                this.b=Number(num2)
+
+                 let op=prompt("Select your operation Addition Subtraction Multiplication, Division")
+                 this.operation = op 
+            }
+        
+            calculate(){
+                if(this.operation === "Addition"){
+                    return this.a + this.b
+                }
+                else if(this.operation === "Subtraction"){
+                    return this.a - this.b
+                }
+                 else if(this.operation === "Multiplication"){
+                    return this.a * this.b
+                }
+                else if(this.operation === "Division"){
+                    return  this.b !== 0 ? this.a / this.b : " cannot divided by zero"
+                }
+                   else{
+                     return "Invalid value"
+            }
+            }
+         
+           
+        }
+
+        const calcu1= new calculator()
+        const Answer = calcu1. calculate()
+        console.log("Result is :",Answer)
+    </script>
+</body>
+</html>
